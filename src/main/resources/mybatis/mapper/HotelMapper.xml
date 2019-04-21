@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wfq.hotel.dao.HotelDao">
+
+
+    <select id="findAll" resultType="Hotel">
+   select id,hotelname,location,feature,score,picturelink,price from q_detail;
+  </select>
+    <select id="findById" resultType="Hotel" parameterType="int">
+        select id,hotelname,location,feature,score,picturelink,price from q_detail where id=#{id};
+    </select>
+
+</mapper>
+
